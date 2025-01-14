@@ -10,9 +10,9 @@
 
     <title>Rock Paper Scissors</title>
   </head>
-  <body class="flex flex-col justify-center items-center bg-slate-900">
+  <body class="flex flex-col justify-center items-center bg-slate-900 h-screen">
     <!-- Header-Bereich -->
-    <header class="flex w-96 justify-between border-[2px] rounded-md p-2 mt-12">
+    <header id="header" class="hidden flex w-96 justify-between border-[2px] rounded-md p-2 mt-12">
       <h1 class="text-left leading-none text-slate-100 uppercase font-custom">
         <span class="block">Rock</span>
         <span class="block">Paper</span>
@@ -27,7 +27,7 @@
     </header>
 
     <!-- Hauptbereich mit Buttons -->
-    <main class="w-64 h-64 flex flex-col justify-center items-center">
+    <main id="main" class="hidden w-64 h-64 flex flex-col justify-center items-center">
       <button
         class="size-20 border-blue-600 border-[8px] rounded-full p-3 m-3 bg-slate-100"
         data-choice="paper"
@@ -53,7 +53,7 @@
     <!-- Startbildschirm -->
     <div
       id="startscreen"
-      class="text-slate-100 flex flex-col justify-center items-center"
+      class="text-slate-100 flex  flex-col justify-center items-center h-screen"
     >
       <h1 class="m-0 p-0 leading-none font-custom text-6xl">Rock</h1>
       <h2 class="m-0 p-0 leading-none font-custom text-6xl">Paper</h2>
@@ -67,23 +67,26 @@
     </div>
 
     <!-- Regeln -->
-    <div id="rules" class="flex flex-col text-slate-100">
-      <h2
-        class="text-xs border-slate-100 border rounded-xl py-1 px-2 inline-block ml-auto mb-1"
-      >
-        Rules
-      </h2>
-      <p>Rock Paper Scissors is a game that is played between two players...</p>
-      <img
+    <div id="rules" class="hidden flex flex-col w-96 text-slate-100">
+      <div id="controlrule" class="inline-block ml-auto mb-1">
+
+        <h2 id="rulebutton"
+          class="text-xs border-slate-100 border rounded-xl py-1 px-2"
+        >
+          Rules
+        </h2>
+      </div>
+      <p id="ruletext" class="hidden">Rock Paper Scissors is a game that is played between two players...</p>
+      <!-- <img 
         src="./images/close.svg"
         alt="Close"
         id="closebutton"
-        class="w-5 h-5"
-      />
+        class="w-5 h-5 hidden"
+      /> -->
     </div>
 
-    <!-- Ergebnisanzeige -->font-custom
-    <div id="results">
+    <!-- Ergebnisanzeige -->
+    <div id="results" class="hidden">
       <h3 id="result">You win</h3>
       <div>
         <p>You chose:</p>
