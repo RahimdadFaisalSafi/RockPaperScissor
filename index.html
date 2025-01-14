@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/thumb.svg" />
+    <script type="module" defer src="./src/main.js"></script>
+
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body class="flex flex-col justify-center items-center bg-slate-900">
+    <!-- Header-Bereich -->
+    <header class="flex w-96 justify-between border-[2px] rounded-md p-2 mt-12">
+      <h1 class="text-left leading-none text-slate-100 uppercase font-custom">
+        <span class="block">Rock</span>
+        <span class="block">Paper</span>
+        <span class="block">Scissors</span>
+      </h1>
+      <div
+        class="bg-slate-100 flex flex-col px-1 justify-center items-center rounded-md"
+      >
+        <span class="block font-semibold uppercase text-xs">Score</span>
+        <span id="score" class="font-semibold">0</span>
+      </div>
+    </header>
+
+    <!-- Hauptbereich mit Buttons -->
+    <main class="w-64 h-64 flex flex-col justify-center items-center">
+      <button
+        class="size-20 border-blue-600 border-[8px] rounded-full p-3 m-3 bg-slate-100"
+        data-choice="paper"
+      >
+        <img src="./images/paper.svg" alt="Paper" />
+      </button>
+      <div class="w-48 flex justify-between">
+        <button
+          class="size-20 border-[8px] border-red-500 rounded-full p-3 bg-slate-100"
+          data-choice="scissors"
+        >
+          <img src="./images/scissors.svg" alt="Scissors" />
+        </button>
+        <button
+          class="size-20 border-[8px] border-orange-400 rounded-full p-3 bg-slate-100"
+          data-choice="rock"
+        >
+          <img src="./images/rock.svg" alt="Rock" />
+        </button>
+      </div>
+    </main>
+
+    <!-- Startbildschirm -->
+    <div
+      id="startscreen"
+      class="text-slate-100 flex flex-col justify-center items-center"
+    >
+      <h1 class="m-0 p-0 leading-none font-custom text-6xl">Rock</h1>
+      <h2 class="m-0 p-0 leading-none font-custom text-6xl">Paper</h2>
+      <h3 class="m-0 p-0 leading-none font-custom text-6xl">Scissors</h3>
+      <button
+        id="startbutton"
+        class="border-slate-100 border rounded-xl text-xs px-2 py-1 mt-4"
+      >
+        Start Game
+      </button>
+    </div>
+
+    <!-- Regeln -->
+    <div id="rules" class="flex flex-col text-slate-100">
+      <h2
+        class="text-xs border-slate-100 border rounded-xl py-1 px-2 inline-block ml-auto mb-1"
+      >
+        Rules
+      </h2>
+      <p>Rock Paper Scissors is a game that is played between two players...</p>
+      <img
+        src="./images/close.svg"
+        alt="Close"
+        id="closebutton"
+        class="w-5 h-5"
+      />
+    </div>
+
+    <!-- Ergebnisanzeige -->font-custom
+    <div id="results">
+      <h3 id="result">You win</h3>
+      <div>
+        <p>You chose:</p>
+        <div id="userchoice"></div>
+      </div>
+      <div>
+        <p>Computer chose:</p>
+        <div id="computerchoice"></div>
+      </div>
+      <button id="playagain">Play Again</button>
+    </div>
+  </body>
+</html>
